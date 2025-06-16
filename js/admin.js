@@ -83,7 +83,8 @@ async function subirImagen(file) {
 
 form.addEventListener('submit', async e =>{
     e.preventDefault();
-
+    submitBtn.innerHTML = '<button aria-busy="true" aria-label="Please wait…" />';
+    submitBtn.disabled = true;
     let imageUrl = imagenUrlEl.value;
     if (imagenFileEl.isDefaultNamespace.length > 0){
         imageUrl = await subirImagen(imagenFileEl.files[0]);
@@ -113,6 +114,7 @@ form.addEventListener('submit', async e =>{
     cancelBtn.hidden = true;
     submitBtn.textContent = 'Agregar';
     CargarPersonas();
+    submitBtn.disabled = false;
 });
 
 
