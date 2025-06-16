@@ -1,0 +1,69 @@
+h1 {
+  text-align: center; /* centrar texto */
+  margin-bottom: 1.5rem; /* espacio abajo */
+}
+
+/* Contenedor de tarjetas usando Flexbox */
+.cards-grid {
+  display: flex; /* flexbox */
+  flex-wrap: wrap; /* permitir salto de línea si no hay suficiente espacio */
+  gap: 1.5rem; /* separación */
+  justify-content: center; /* centrar items */
+  margin: 0 auto; /* centrar contenedor */
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  flex: 1 1 220px; /* crecimiento flexible */
+  max-width: 300px; /* ancho máximo */
+  border: 1px solid #ddd; /* borde claro */
+  border-radius: 8px; /* esquinas redondeadas */
+  padding: 1rem; /* espacio interno */
+  text-align: center; /* centrar texto */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  transition: transform 0.2s; /* animación suave */
+}
+
+.card:hover {
+  transform: translateY(-4px); /* elevar al pasar */
+}
+
+.card img {
+  width: 100%; /* ancho completo */
+  height: 160px; /* altura fija */
+  object-fit: cover; /* recortar proporción */
+  border-radius: 4px; /* esquinas pequeñas */
+  margin-bottom: 0.75rem; /* espacio abajo */
+}
+
+.card h2 {
+  font-size: 1.25rem; /* tamaño título */
+  margin: 0.5rem 0 0.25rem; /* márgenes verticales */
+}
+
+.card p {
+  margin: 0.25rem 0; /* márgenes verticales */
+  color: #555; /* texto atenuado */
+  font-size: 0.95rem; /* tamaño cuerpo */
+}
+
+#loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+#loader::after{
+  content: "";
+  margin-top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid #ccc;
+  border-top: 3px solid #0d6efd;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin{
+  to {transform:rotate(360deg);}
+}

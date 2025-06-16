@@ -1,0 +1,36 @@
+/* Título principal */
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Formulario */
+.persona-form {
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de campos usando Flexbox */
+.persona-form .flex {
+  display: flex; /* contenedor flex */
+  flex-wrap: wrap; /* permite salto de línea */
+  gap: 1rem; /* separación entre elementos */
+}
+
+/* Cada etiqueta ocupa mínimo 200px y crece según espacio */
+.persona-form .flex label {
+  flex-grow: 1; /* el elemento puede crecer para ocupar espacio disponible */
+  flex-shrink: 1; /* el elemento puede encogerse si no hay suficiente espacio */
+  flex-basis: 200px; /* tamaño inicial preferido del elemento (mínimo base) */
+}
+
+/* Imágenes en la tabla */
+table img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Espaciado en botones de acción */
+table button {
+  margin-right: 0.25rem;
+}

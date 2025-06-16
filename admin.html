@@ -1,0 +1,84 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administración de Personas</title>
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+
+  <!-- Estilos específicos de admin -->
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body>
+  <header class="container">
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><strong>Agenda de Contactos</strong></li>
+        <li><a href="index.html">Directorio</a></li>
+        <li><a href="admin.html">Administración</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>CRUD de Personas</h1>
+
+    <!-- Formulario -->
+    <form id="persona-form" class="persona-form">
+      <div class="flex">
+        <label for="nombre">Nombre:
+          <input type="text" id="nombre" required />
+        </label>
+        <label for="telefono">Teléfono:
+          <input type="tel" id="telefono" required />
+        </label>
+        <label for="imagen-file">Imagen:
+          <input type="file" id="imagen-file" accept="image/*" />
+        </label>
+      </div>
+      
+      <!-- Guarda la URL de la imagen cuando se edita un registro (para no subirla de nuevo si no cambia) -->
+      <input type="hidden" id="imagen-url" />
+
+      <!-- Guarda el ID de la persona que se está editando (vacío en modo "agregar") -->
+      <input type="hidden" id="persona-id" />
+
+      <!-- Botón principal para agregar o actualizar un registro -->
+      <button type="submit" id="btn-submit">Agregar</button>
+
+      <!-- Botón para cancelar la edición y resetear el formulario -->
+      <button type="button" id="btn-cancel" hidden>Cancelar</button>
+
+    </form>
+
+    <hr />
+
+    <!-- Tabla de personas -->
+    <table>
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="personas-tbody">
+        <!-- inyectado por script -->
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Instituto Técnico Ricaldone</p>
+  </footer>
+
+  <script src="js/admin.js"></script>
+</body>
+
+</html>
+

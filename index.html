@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Directorio de Personas</title>
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+
+  <!-- Estilos específicos de index -->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <header class="container">
+    <nav>
+      <ul>
+        <li><strong>Agenda de Contactos</strong></li>
+        <li><a href="index.html">Directorio</a></li>
+        <li><a href="admin.html">Administración</a></li>
+      </ul>
+    </nav>
+  </header>
+
+   <!-- Loader -->
+   <div id="loader" role="status" >
+    <strong>Cargando datos...</strong>
+   </div>
+
+  <main class="container" id="contenido">
+    <h1>Personas Registradas</h1>
+    <div id="cards-container" class="cards-grid">
+      <!-- Aquí se inyectan las tarjetas usando JS -->
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Instituto Técnico Ricaldone</p>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
+

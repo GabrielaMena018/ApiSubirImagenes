@@ -1,0 +1,21 @@
+https://retoolapi.dev/kHGTcd/tbProveedores
+
+
+HTTP method endpoints
+
+GET
+/kHGTcd/tbProveedores
+GET filter
+/kHGTcd/tbProveedores?nombre=value
+GET by id
+/kHGTcd/tbProveedores/1
+GET paginate
+/kHGTcd/tbProveedores?_page=2&_limit=10
+POST
+/kHGTcd/tbProveedores
+PUT
+/kHGTcd/tbProveedores/1
+PATCH
+/kHGTcd/tbProveedores/1
+DELETE
+/kHGTcd/tbProveedores/1
